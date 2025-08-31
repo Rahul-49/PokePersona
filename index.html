@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokéPersona</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>PokéPersona 🔮</h1>
+    <p>Upload a photo of yourself to find your Pokémon partner!</p>
+
+    <!-- Modal for API Key -->
+    <div id="apiKeyModal" class="modal">
+        <div class="modal-content">
+            <h2>Enter Your Gemini API Key</h2>
+            <p>Tip: You can get your free Gemini API key from 
+               <a href="https://aistudio.google.com/app/apikey" target="_blank">Google AI Studio</a>.</p>
+            <input type="password" id="apiKeyInput" placeholder="Paste your API key here">
+            <button id="submitApiKey">Submit</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <label for="file-upload" class="custom-file-upload">
+            ✨ Select an Image
+        </label>
+        <input id="file-upload" type="file" accept="image/*"/>
+    </div>
+
+    <div id="result-container">
+        <h2>Your Pokémon is...</h2>
+        <div id="pokemon-result">
+            <p>Please upload an image to begin.</p>
+        </div>
+    </div>
+
+    <script src="https://sdk.withgoogle.com/genai/js/v1/google-genai.js"></script>
+    <script defer src="script.js"></script>
+</body>
+</html>
